@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import SecondaryButton from '../Atoms/buttons/SecondaryButton'
 import TextInput from '../Atoms/TextInput';
 
-function MyComponent() {
+function InputBtnGroup() {
   const [message, setMessage] = useState('');
-
   const handleClick = () => {
     alert(message+" 입력완료");
     setMessage('');
@@ -25,4 +24,4 @@ function MyComponent() {
   );
 }
 
-export default MyComponent;
+export default InputBtnGroup;

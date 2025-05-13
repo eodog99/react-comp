@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import styled from "styled-components";
+import SecondaryButton from "../../Atoms/buttons/SecondaryButton";
 
 
 // 모달 
@@ -27,17 +28,24 @@ const ModalContainer = styled.div`
 `;
 
  const ModalBtn = styled.button`
-    background-color: pink;
+    background-color: #00529F;
     text-decoration: none;
     border:none;
     padding:20px;
     color: white;
-    border-radius:30px;
     cursor: grab;
 `;
+const ModalHead = styled.div`
+    width: 100%;
+    height: 46px;
+    background-color: #00529F;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 8px 8px 0px 0px;
+`
 
  const ExitBtn = styled(ModalBtn)`
-    background-color : #4000c7;
     border-radius: 10px;
     text-decoration: none;
     margin: 10px;
@@ -55,7 +63,7 @@ const ModalContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  border-radius: 20px;
+  border-radius: 8px;
   width: 500px;
   heigth: 200px;
   background-color: #ffffff;
@@ -67,19 +75,21 @@ const ModalContainer = styled.div`
 `;
 
 const Modal = ()=> {
+    // 모달 열기 닫기 상태를 제어하는 state
     const [isOpen, setIsOpen] = useState(false);
 
+    // 클릭할 때마다 열기 닫기를 토글함
     const openModalHandler = () => {
         setIsOpen(!isOpen)
     };
     return (
         <>
             <ModalContainer>
-                <ModalBtn onClick={openModalHandler}>open Modal</ModalBtn>
+                <SecondaryButton onClick={openModalHandler}>Modal</SecondaryButton>
                 {isOpen?
                 <ModalBackdrop onClick={openModalHandler}>
                     <ModalView onClick={(e) => e.stopPropagation()}>
-                        <ExitBtn onClick={openModalHandler}>x</ExitBtn>
+                        <ModalHead><ExitBtn onClick={openModalHandler}><img src="/common/img/close.svg"></img></ExitBtn></ModalHead>
                         <div className="desc">Hello</div>
                     </ModalView>
                 </ModalBackdrop>

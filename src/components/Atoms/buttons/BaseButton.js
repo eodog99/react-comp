@@ -2,11 +2,12 @@
 import styled from 'styled-components';
 
 const BaseButton = styled.button`
-  background-color: ${props => props.bgColor || 'blue'};
+  background-color: ${props => props.bgColor || '#fff'};
   font-size : ${props => props.size || '14px'};
+  border-radius: 4px;
   font-weight: 700; 
   color: white;
-  padding: 0.5rem 1rem;
+  white-space: nowrap;
   border: none;
   cursor: pointer;
   transition: 0.2s;

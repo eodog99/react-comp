@@ -4,7 +4,7 @@ import styled from "styled-components";
 const GroupWrapper = styled.div`
     display: flex;
     align-items : center;
-    gap: 4px;
+    gap: 8px;
 `;
 
 const ButtonGroup = ({children}) => {
