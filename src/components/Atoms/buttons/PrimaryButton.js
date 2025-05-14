@@ -1,4 +1,3 @@
-// components/buttons/PrimaryButton.js
 import styled from 'styled-components';
 import BaseButton from './BaseButton';
 

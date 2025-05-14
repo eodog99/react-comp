@@ -1,4 +1,3 @@
-// components/buttons/BaseButton.js
 import styled from 'styled-components';
 
 const BaseButton = styled.button`

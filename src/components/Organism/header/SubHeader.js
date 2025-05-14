@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import StarButton from "../../Atoms/buttons/StarBtn";
 
 const SubHeaderWrap = styled.div`
     width: 100%;
@@ -20,11 +21,13 @@ color: var(--text-dark-blue);
 `
 
 const SubHeader = () => {
+
     return(
         <>
         <SubHeaderWrap>
             <SubHeaderTitle>
-                <img src="/common/img/StarIcon.svg"></img>
+                {/* <img src="/common/img/StarIcon.svg"></img> */}
+                <StarButton></StarButton>
                 <h2>2Depth Menu</h2>
             </SubHeaderTitle>
         </SubHeaderWrap>
